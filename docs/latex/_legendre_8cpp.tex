@@ -1,0 +1,35 @@
+\doxysection{C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/src/\+Legendre.cpp File Reference}
+\hypertarget{_legendre_8cpp}{}\label{_legendre_8cpp}\index{C:/Users/cuadr/Desktop/Proyecto/src/Legendre.cpp@{C:/Users/cuadr/Desktop/Proyecto/src/Legendre.cpp}}
+
+
+Computes the coefficient matrices of Legendre polynomials and their derivatives.  
+
+
+{\ttfamily \#include "{}Legendre.\+h"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_legendre_8cpp_a0241aaa788f0c3f0d24d5b11a999bd83}\label{_legendre_8cpp_a0241aaa788f0c3f0d24d5b11a999bd83} 
+void {\bfseries Legendre} (int n, int m, double fi, \mbox{\hyperlink{class_matrix}{Matrix}} \&pnm, \mbox{\hyperlink{class_matrix}{Matrix}} \&dpnm)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Computes the coefficient matrices of Legendre polynomials and their derivatives. 
+
+This function computes the coefficient matrices of Legendre polynomials {\ttfamily pnm} and their derivatives {\ttfamily dpnm} up to a given order {\ttfamily n} and degree {\ttfamily m}, evaluated at angle {\ttfamily fi}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Maximum order of the Legendre polynomials. \\
+\hline
+{\em m} & Maximum degree of the Legendre polynomials. \\
+\hline
+{\em fi} & Angle in radians at which the Legendre polynomials are evaluated. \\
+\hline
+{\em pnm} & Reference to a matrix to store the coefficients of Legendre polynomials. \\
+\hline
+{\em dpnm} & Reference to a matrix to store the coefficients of derivatives of Legendre polynomials. \\
+\hline
+\end{DoxyParams}

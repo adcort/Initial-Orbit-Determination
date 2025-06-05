@@ -1,0 +1,35 @@
+\doxysection{C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/src/\+LTC.cpp File Reference}
+\hypertarget{_l_t_c_8cpp}{}\label{_l_t_c_8cpp}\index{C:/Users/cuadr/Desktop/Proyecto/src/LTC.cpp@{C:/Users/cuadr/Desktop/Proyecto/src/LTC.cpp}}
+
+
+Transformation from Greenwich meridian system to local tangent coordinates.  
+
+
+{\ttfamily \#include "{}LTC.\+h"{}}\newline
+{\ttfamily \#include "{}R\+\_\+y.\+h"{}}\newline
+{\ttfamily \#include "{}R\+\_\+z.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_l_t_c_8cpp_aa960533be8238ffafe85d1e619fc2ba5}\label{_l_t_c_8cpp_aa960533be8238ffafe85d1e619fc2ba5} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries LTC} (double lon, double lat)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Transformation from Greenwich meridian system to local tangent coordinates. 
+
+This function performs the transformation from the Greenwich meridian system to local tangent coordinates.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lon} & Geodetic East longitude \mbox{[}rad\mbox{]} \\
+\hline
+\mbox{\texttt{ in}}  & {\em lat} & Geodetic latitude \mbox{[}rad\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em M} & Rotation matrix from the Earth equator and Greenwich meridian to the local tangent (East-\/\+North-\/\+Zenith) coordinate system\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Last modified\+: 2015/08/12 M. Mahooti 
+\end{DoxyNote}

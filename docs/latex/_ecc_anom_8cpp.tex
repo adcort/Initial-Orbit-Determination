@@ -1,0 +1,38 @@
+\doxysection{C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/src/\+Ecc\+Anom.cpp File Reference}
+\hypertarget{_ecc_anom_8cpp}{}\label{_ecc_anom_8cpp}\index{C:/Users/cuadr/Desktop/Proyecto/src/EccAnom.cpp@{C:/Users/cuadr/Desktop/Proyecto/src/EccAnom.cpp}}
+
+
+Computes the eccentric anomaly for elliptic orbits.  
+
+
+{\ttfamily \#include "{}Ecc\+Anom.\+h"{}}\newline
+{\ttfamily \#include "{}Const.\+h"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_ecc_anom_8cpp_a2ad531000471d74f459467a747a79aff}\label{_ecc_anom_8cpp_a2ad531000471d74f459467a747a79aff} 
+double {\bfseries Ecc\+Anom} (double M, double e)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Computes the eccentric anomaly for elliptic orbits. 
+
+This function computes the eccentric anomaly for elliptic orbits based on the given mean anomaly and eccentricity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & Mean anomaly in radians. \\
+\hline
+{\em e} & Eccentricity of the orbit (must be in the range \mbox{[}0, 1\mbox{]}).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Eccentric anomaly in radians.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Last modified\+: 2015/08/12 by M. Mahooti. 
+\end{DoxyNote}

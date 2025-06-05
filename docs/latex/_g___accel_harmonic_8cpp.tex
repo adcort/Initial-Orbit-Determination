@@ -1,0 +1,43 @@
+\doxysection{C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/src/\+G\+\_\+\+Accel\+Harmonic.cpp File Reference}
+\hypertarget{_g___accel_harmonic_8cpp}{}\label{_g___accel_harmonic_8cpp}\index{C:/Users/cuadr/Desktop/Proyecto/src/G\_AccelHarmonic.cpp@{C:/Users/cuadr/Desktop/Proyecto/src/G\_AccelHarmonic.cpp}}
+
+
+Computes the gradient of the Earth\textquotesingle{}s harmonic gravity field.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}G\+\_\+\+Accel\+Harmonic.\+h"{}}\newline
+{\ttfamily \#include "{}Accel\+Harmonic.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_g___accel_harmonic_8cpp_a81794682ea536cf1d414ad2f8f58c266}\label{_g___accel_harmonic_8cpp_a81794682ea536cf1d414ad2f8f58c266} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries G\+\_\+\+Accel\+Harmonic} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r, \mbox{\hyperlink{class_matrix}{Matrix}} \&U, int n\+\_\+max, int m\+\_\+max, \mbox{\hyperlink{class_matrix}{Matrix}} \&GGM03S)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Computes the gradient of the Earth\textquotesingle{}s harmonic gravity field. 
+
+This function computes the gradient of the Earth\textquotesingle{}s harmonic gravity field based on the given satellite position vector and transformation matrix. It uses the gravity model degree and order specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Satellite position vector in the true-\/of-\/date system. \\
+\hline
+{\em U} & Transformation matrix to body-\/fixed system. \\
+\hline
+{\em n} & Gravity model degree. \\
+\hline
+{\em m} & Gravity model order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gradient (G=da/dr) in the true-\/of-\/date system.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function assumes that the transformation matrix U and satellite position vector r are correctly formatted.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+Accel\+Harmonic 
+\end{DoxySeeAlso}

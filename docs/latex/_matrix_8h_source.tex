@@ -1,0 +1,63 @@
+\doxysection{Matrix.\+h}
+\hypertarget{_matrix_8h_source}{}\label{_matrix_8h_source}\index{C:/Users/cuadr/Desktop/Proyecto/include/Matrix.h@{C:/Users/cuadr/Desktop/Proyecto/include/Matrix.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_MATRIX\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_MATRIX\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_matrix}{Matrix}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}(\textcolor{keywordtype}{int}\ fil,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}(\textcolor{keywordtype}{int}\ fil,\ \textcolor{keywordtype}{int}\ col,\ \textcolor{keywordtype}{double}\ v[],\ \textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ m);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{\string~Matrix}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ get(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{int}\ j);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ set(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{int}\ j,\ \textcolor{keywordtype}{double}\ d);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getNumCol();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getNumFilas();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::vector<double>\ getCol(\textcolor{keywordtype}{int}\ col);\ \textcolor{comment}{//Obtenemos\ el\ vector\ columna\ de\ una\ matriz}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::vector<double>\ getFila(\textcolor{keywordtype}{int}\ col);\ \textcolor{comment}{//Obtenemos\ el\ vector\ fila\ de\ una\ matriz}}
+\DoxyCodeLine{00019\ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ matrix2);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\ \ operator+(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ matrix2);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\ \ operator-\/(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ matrix2);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\ \ operator*(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ matrix2);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\&\ operator()(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ i,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\ \ operator+(\textcolor{keywordtype}{double}\ c);\textcolor{comment}{//Redefinimos\ para\ sumar\ un\ escalar\ a\ toda\ las\ entradas}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\ \ operator*(\textcolor{keywordtype}{double}\ c);\textcolor{comment}{//Redefinimos\ para\ multiplicar\ por\ un\ escalar}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::vector<double>\ operator*(std::vector<double>\&\ vec);\ \textcolor{comment}{//Redefinimos\ para\ multiplicar\ por\ un\ vector}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\ \ operator/(\textcolor{keywordtype}{double}\ c);\textcolor{comment}{//Redefinimos\ para\ dividir\ entre\ un\ escalar}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ norm();\textcolor{comment}{//Norma\ de\ Frobenius.\ Sustituye\ el\ norm()\ de\ Matlab.}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ normaVector(std::vector<double>\ vec);\ \textcolor{comment}{//Calcula\ la\ norma\ de\ un\ vector}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ normaVector();\ \textcolor{comment}{//Calcula\ la\ norma\ de\ una\ matriz\ como\ si\ fuera\ un\ vector}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ productoEscalar(std::vector<double>,\ std::vector<double>);\ \textcolor{comment}{//Calcula\ el\ producto\ escalar\ de\ 2\ vectores}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ productoEscalar(\mbox{\hyperlink{class_matrix}{Matrix}}\ \&\ m2);\ \textcolor{comment}{//Calcula\ el\ producto\ escalar\ entre\ dos\ matrices\ fila}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<double>\ productoVectorial(std::vector<double>\ vec1,\ std::vector<double>\ vec2);\ \textcolor{comment}{//Calcula\ el\ producto\ vectorial\ de\ dos\ vectores\ de\ 3\ entradas}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\ productoVectorial(\mbox{\hyperlink{class_matrix}{Matrix}}\&\ m2);\ \textcolor{comment}{//Realiza\ el\ producto\ vectorial\ entre\ dos\ matrices\ fila}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<double>\ unit(\textcolor{keyword}{const}\ std::vector<double>\&\ vec);\ \textcolor{comment}{//Recibe\ un\ vector\ como\ parámetro\ y\ devuelve\ el\ vector\ unitario\ correspondiente}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ angl(\textcolor{keyword}{const}\ std::vector<double>\ vec1,\ \textcolor{keyword}{const}\ std::vector<double>\ vec2);\ \textcolor{comment}{//Dados\ dos\ vectores,\ devolvemos\ el\ angulo\ entre\ ellos}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\ transponer();\ \textcolor{comment}{//Devuelve\ la\ matriz\ traspuesta}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\ inversa();\ \textcolor{comment}{//Devuelve\ la\ inversa\ de\ la\ matriz}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ identidad(\textcolor{keywordtype}{int}\ n);\ \textcolor{comment}{//Construye\ una\ matriz\ identidad\ de\ tamaño\ n\ x\ n}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ determinante();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ toString();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ print();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ equalMatrix(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ m2,\ \textcolor{keywordtype}{double}\ tolerancia);}
+\DoxyCodeLine{00046\ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initMatrix();}
+\DoxyCodeLine{00049\ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ fil;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ col;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ **matrix;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

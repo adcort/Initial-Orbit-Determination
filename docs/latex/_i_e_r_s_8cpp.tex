@@ -1,0 +1,67 @@
+\doxysection{C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/src/\+IERS.cpp File Reference}
+\hypertarget{_i_e_r_s_8cpp}{}\label{_i_e_r_s_8cpp}\index{C:/Users/cuadr/Desktop/Proyecto/src/IERS.cpp@{C:/Users/cuadr/Desktop/Proyecto/src/IERS.cpp}}
+
+
+IERS\+: Management of IERS time and polar motion data.  
+
+
+{\ttfamily \#include "{}IERS.\+h"{}}\newline
+{\ttfamily \#include "{}Const.\+h"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_i_e_r_s_8cpp_a3fdaf40ebd2addb78452f6190775ad01}\label{_i_e_r_s_8cpp_a3fdaf40ebd2addb78452f6190775ad01} 
+void {\bfseries IERS} (\mbox{\hyperlink{class_matrix}{Matrix}} \&eop, double Mjd\+\_\+\+UTC, char interp, double \&x\+\_\+pole, double \&y\+\_\+pole, double \&UT1\+\_\+\+UTC, double \&LOD, double \&dpsi, double \&deps, double \&dx\+\_\+pole, double \&dy\+\_\+pole, double \&TAI\+\_\+\+UTC)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+IERS\+: Management of IERS time and polar motion data. 
+
+This function retrieves IERS Earth rotation parameters based on the input Modified Julian Date (Mjd\+\_\+\+UTC) and the provided Earth Orientation Parameters (eop).
+
+
+\begin{DoxyParams}{Parameters}
+{\em eop} & \doxylink{class_matrix}{Matrix} containing Earth Orientation Parameters (eop) data \\
+\hline
+{\em Mjd\+\_\+\+UTC} & Modified Julian Date (UTC) for which parameters are requested \\
+\hline
+{\em interp} & Interpolation type (\textquotesingle{}n\textquotesingle{} for none, \textquotesingle{}l\textquotesingle{} for linear) \\
+\hline
+{\em x\+\_\+pole} & Output\+: Pole coordinate in X direction \mbox{[}rad\mbox{]} \\
+\hline
+{\em y\+\_\+pole} & Output\+: Pole coordinate in Y direction \mbox{[}rad\mbox{]} \\
+\hline
+{\em UT1\+\_\+\+UTC} & Output\+: UT1-\/\+UTC time difference \mbox{[}s\mbox{]} \\
+\hline
+{\em LOD} & Output\+: Length of day \mbox{[}s\mbox{]} \\
+\hline
+{\em dpsi} & Output\+: Nutation correction in longitude \mbox{[}rad\mbox{]} \\
+\hline
+{\em deps} & Output\+: Nutation correction in obliquity \mbox{[}rad\mbox{]} \\
+\hline
+{\em dx\+\_\+pole} & Output\+: Rate of change of X pole coordinate \mbox{[}rad/day\mbox{]} \\
+\hline
+{\em dy\+\_\+pole} & Output\+: Rate of change of Y pole coordinate \mbox{[}rad/day\mbox{]} \\
+\hline
+{\em TAI\+\_\+\+UTC} & Output\+: TAI-\/\+UTC time difference \mbox{[}s\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function assumes the input eop matrix is structured such that each row contains the following parameters in sequence\+: MJD, x\+\_\+pole, y\+\_\+pole, UT1-\/\+UTC, LOD, dpsi, deps, dx\+\_\+pole, dy\+\_\+pole, TAI-\/\+UTC.
+
+If interp is \textquotesingle{}l\textquotesingle{}, linear interpolation is used between nearest dates in eop. If interp is \textquotesingle{}n\textquotesingle{} or any other character, the nearest date\textquotesingle{}s data from eop is used.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{_const_8h_source}{const.\+h} for unit conversions and constants used in the calculations.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. Outputs are passed by reference.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+M. Mahooti 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018/02/01 
+\end{DoxyDate}

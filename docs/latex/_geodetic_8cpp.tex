@@ -1,0 +1,43 @@
+\doxysection{C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/src/\+Geodetic.cpp File Reference}
+\hypertarget{_geodetic_8cpp}{}\label{_geodetic_8cpp}\index{C:/Users/cuadr/Desktop/Proyecto/src/Geodetic.cpp@{C:/Users/cuadr/Desktop/Proyecto/src/Geodetic.cpp}}
+
+
+Converts a given position vector to geodetic coordinates.  
+
+
+{\ttfamily \#include "{}Geodetic.\+h"{}}\newline
+{\ttfamily \#include "{}Const.\+h"{}}\newline
+{\ttfamily \#include "{}Matrix.\+h"{}}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_geodetic_8cpp_a60060058c9665c8a7f2a1d687ba49c46}\label{_geodetic_8cpp_a60060058c9665c8a7f2a1d687ba49c46} 
+void {\bfseries Geodetic} (double \&lon, double \&lat, double \&h, const std\+::vector$<$ double $>$ \&r)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Converts a given position vector to geodetic coordinates. 
+
+This function calculates geodetic coordinates (longitude, latitude, and altitude) from a given position vector in Cartesian coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Vector of Cartesian coordinates \mbox{[}x, y, z\mbox{]} in meters. \\
+\hline
+{\em lon} & Geodetic longitude in radians. \\
+\hline
+{\em lat} & Geodetic latitude in radians. \\
+\hline
+{\em h} & Height above the ellipsoid in meters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Last modified\+: 2015/08/12 by M. Mahooti 
+\end{DoxyNote}

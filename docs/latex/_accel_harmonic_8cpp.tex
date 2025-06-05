@@ -1,0 +1,49 @@
+\doxysection{C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/src/\+Accel\+Harmonic.cpp File Reference}
+\hypertarget{_accel_harmonic_8cpp}{}\label{_accel_harmonic_8cpp}\index{C:/Users/cuadr/Desktop/Proyecto/src/AccelHarmonic.cpp@{C:/Users/cuadr/Desktop/Proyecto/src/AccelHarmonic.cpp}}
+
+
+Computes the acceleration due to the harmonic gravity field of the central body.  
+
+
+{\ttfamily \#include "{}Accel\+Harmonic.\+h"{}}\newline
+{\ttfamily \#include "{}Const.\+h"{}}\newline
+{\ttfamily \#include "{}Legendre.\+h"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_accel_harmonic_8cpp_a5bc2868570e8aa6c44327229c11ac164}\label{_accel_harmonic_8cpp_a5bc2868570e8aa6c44327229c11ac164} 
+void {\bfseries Accel\+Harmonic} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r, \mbox{\hyperlink{class_matrix}{Matrix}} \&E, int n\+\_\+max, int m\+\_\+max, \mbox{\hyperlink{class_matrix}{Matrix}} \&a, \mbox{\hyperlink{class_matrix}{Matrix}} \&GGM03S)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Computes the acceleration due to the harmonic gravity field of the central body. 
+
+This function calculates the acceleration experienced by a satellite due to the gravitational field of the central body represented in terms of spherical harmonics.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Satellite position vector in the inertial system. \\
+\hline
+{\em E} & Transformation matrix to body-\/fixed system. \\
+\hline
+{\em n\+\_\+max} & Maximum degree of spherical harmonics. \\
+\hline
+{\em m\+\_\+max} & Maximum order of spherical harmonics (must satisfy m\+\_\+max \texorpdfstring{$<$}{<}= n\+\_\+max; m\+\_\+max = 0 for zonals). \\
+\hline
+{\em a} & Output parameter\+: Acceleration vector (a = d\texorpdfstring{$^\wedge$}{\string^}2r/dt\texorpdfstring{$^\wedge$}{\string^}2). \\
+\hline
+{\em GGM03S} & Gravity model coefficients matrix (should contain Cnm and Snm coefficients).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function assumes that r and E are properly defined \doxylink{class_matrix}{Matrix} objects. 
+
+GGM03S should contain the coefficients Cnm and Snm required for the calculation. 
+
+Last modified\+: 2015/08/12 by M. Mahooti. 
+\end{DoxyNote}

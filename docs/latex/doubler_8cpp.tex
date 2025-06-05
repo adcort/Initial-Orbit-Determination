@@ -1,0 +1,76 @@
+\doxysection{C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/src/doubler.cpp File Reference}
+\hypertarget{doubler_8cpp}{}\label{doubler_8cpp}\index{C:/Users/cuadr/Desktop/Proyecto/src/doubler.cpp@{C:/Users/cuadr/Desktop/Proyecto/src/doubler.cpp}}
+
+
+Calculates various parameters related to orbits and geometry for a double-\/range system.  
+
+
+{\ttfamily \#include "{}doubler.\+h"{}}\newline
+{\ttfamily \#include "{}Const.\+h"{}}\newline
+{\ttfamily \#include "{}Matrix.\+h"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{doubler_8cpp_aea5aac6fc3a7ef5015bd1bfc7f297d41}\label{doubler_8cpp_aea5aac6fc3a7ef5015bd1bfc7f297d41} 
+void {\bfseries doubler} (double cc1, double cc2, double \&magrsite1, double \&magrsite2, double magr1in, double magr2in, \mbox{\hyperlink{class_matrix}{Matrix}} \&los1, \mbox{\hyperlink{class_matrix}{Matrix}} \&los2, \mbox{\hyperlink{class_matrix}{Matrix}} \&los3, \mbox{\hyperlink{class_matrix}{Matrix}} \&rsite1, \mbox{\hyperlink{class_matrix}{Matrix}} \&rsite2, \mbox{\hyperlink{class_matrix}{Matrix}} \&rsite3, double t1, double t3, char direct, \mbox{\hyperlink{class_matrix}{Matrix}} \&r2, \mbox{\hyperlink{class_matrix}{Matrix}} \&r3, double \&f1, double \&f2, double \&q1, double \&magr1, double \&magr2, double \&a, double \&deltae32)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Calculates various parameters related to orbits and geometry for a double-\/range system. 
+
+This function computes multiple parameters such as position vectors, norms, angles, and more, based on various input parameters and provided matrices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cc1} & Correction constant 1. \\
+\hline
+{\em cc2} & Correction constant 2. \\
+\hline
+{\em magrsite1} & Magnitude of site 1. \\
+\hline
+{\em magrsite2} & Magnitude of site 2. \\
+\hline
+{\em magr1in} & Magnitude of range 1. \\
+\hline
+{\em magr2in} & Magnitude of range 2. \\
+\hline
+{\em los1} & Line of sight state vector 1. \\
+\hline
+{\em los2} & Line of sight state vector 2. \\
+\hline
+{\em los3} & Line of sight state vector 3. \\
+\hline
+{\em rsite1} & Position matrix of site 1. \\
+\hline
+{\em rsite2} & Position matrix of site 2. \\
+\hline
+{\em rsite3} & Position matrix of site 3. \\
+\hline
+{\em t1} & Time 1. \\
+\hline
+{\em t3} & Time 3. \\
+\hline
+{\em direct} & Character indicating the direction. \\
+\hline
+{\em r2} & Resulting position matrix 2 (output). \\
+\hline
+{\em r3} & Resulting position matrix 3 (output). \\
+\hline
+{\em f1} & Resulting value 1. \\
+\hline
+{\em f2} & Resulting value 2. \\
+\hline
+{\em q1} & Resulting value 3. \\
+\hline
+{\em magr1} & Magnitude of range 1 (output). \\
+\hline
+{\em magr2} & Magnitude of range 2 (output). \\
+\hline
+{\em a} & Calculated orbital parameter (output). \\
+\hline
+{\em deltae32} & Delta Epsilon 32 (output). \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,116 @@
+\doxysection{Matrix Class Reference}
+\hypertarget{class_matrix}{}\label{class_matrix}\index{Matrix@{Matrix}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_matrix_a0e6b719fac98b8ad79ec11564ec3a84a}\label{class_matrix_a0e6b719fac98b8ad79ec11564ec3a84a} 
+{\bfseries Matrix} (int fil, int col)
+\item 
+\Hypertarget{class_matrix_a667a2068daaf0f64d7f6b88ffdbc6ff5}\label{class_matrix_a667a2068daaf0f64d7f6b88ffdbc6ff5} 
+{\bfseries Matrix} (int fil, int col, double v\mbox{[}$\,$\mbox{]}, int n)
+\item 
+\Hypertarget{class_matrix_a765f4dcb51b6829311cc3e7576388423}\label{class_matrix_a765f4dcb51b6829311cc3e7576388423} 
+{\bfseries Matrix} (const \mbox{\hyperlink{class_matrix}{Matrix}} \&m)
+\item 
+\Hypertarget{class_matrix_a0cbb29fbfc6d2fdcf7b16607f4038c6e}\label{class_matrix_a0cbb29fbfc6d2fdcf7b16607f4038c6e} 
+double {\bfseries get} (int i, int j)
+\item 
+\Hypertarget{class_matrix_a85767dd351ff762579c72847ddec70a8}\label{class_matrix_a85767dd351ff762579c72847ddec70a8} 
+void {\bfseries set} (int i, int j, double d)
+\item 
+\Hypertarget{class_matrix_ae1dc793fb1b1659055d18e25e1bef82d}\label{class_matrix_ae1dc793fb1b1659055d18e25e1bef82d} 
+int {\bfseries get\+Num\+Col} ()
+\item 
+\Hypertarget{class_matrix_a7f42da71899cdc330bc1dcd1a182f61a}\label{class_matrix_a7f42da71899cdc330bc1dcd1a182f61a} 
+int {\bfseries get\+Num\+Filas} ()
+\item 
+\Hypertarget{class_matrix_a4c8897495c3fca86984c67e8b2a785d2}\label{class_matrix_a4c8897495c3fca86984c67e8b2a785d2} 
+std\+::vector$<$ double $>$ {\bfseries get\+Col} (int col)
+\item 
+\Hypertarget{class_matrix_abf8a3ede82c50ad5053a0c1bb810c502}\label{class_matrix_abf8a3ede82c50ad5053a0c1bb810c502} 
+std\+::vector$<$ double $>$ {\bfseries get\+Fila} (int col)
+\item 
+\Hypertarget{class_matrix_a63ca8aef2b91a956af8d30c725e595eb}\label{class_matrix_a63ca8aef2b91a956af8d30c725e595eb} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_matrix}{Matrix}} \&matrix2)
+\item 
+\Hypertarget{class_matrix_ae1e8a3d02bfe61fa1f49d0d208ceab62}\label{class_matrix_ae1e8a3d02bfe61fa1f49d0d208ceab62} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries operator+} (const \mbox{\hyperlink{class_matrix}{Matrix}} \&matrix2)
+\item 
+\Hypertarget{class_matrix_aba839542259d70f36378edd31bed408d}\label{class_matrix_aba839542259d70f36378edd31bed408d} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries operator-\/} (const \mbox{\hyperlink{class_matrix}{Matrix}} \&matrix2)
+\item 
+\Hypertarget{class_matrix_a129e38b283c55a3f65ed9606a5d5f425}\label{class_matrix_a129e38b283c55a3f65ed9606a5d5f425} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (const \mbox{\hyperlink{class_matrix}{Matrix}} \&matrix2)
+\item 
+\Hypertarget{class_matrix_ac18f44f6e2da73617432cb98c9b21fa5}\label{class_matrix_ac18f44f6e2da73617432cb98c9b21fa5} 
+double \& {\bfseries operator()} (const int i, const int j) const
+\item 
+\Hypertarget{class_matrix_a1cfeb575454301f67496287fb5500954}\label{class_matrix_a1cfeb575454301f67496287fb5500954} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries operator+} (double c)
+\item 
+\Hypertarget{class_matrix_a85cfae1b0755ccb1f5d8ee18e50cfc24}\label{class_matrix_a85cfae1b0755ccb1f5d8ee18e50cfc24} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (double c)
+\item 
+\Hypertarget{class_matrix_a7e8102aa6d9197a02433e9cc8041096d}\label{class_matrix_a7e8102aa6d9197a02433e9cc8041096d} 
+std\+::vector$<$ double $>$ {\bfseries operator\texorpdfstring{$\ast$}{*}} (std\+::vector$<$ double $>$ \&vec)
+\item 
+\Hypertarget{class_matrix_ace8fb06acd24b4bb4e63d9894a5bdb5b}\label{class_matrix_ace8fb06acd24b4bb4e63d9894a5bdb5b} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries operator/} (double c)
+\item 
+\Hypertarget{class_matrix_aa30b90656f5063a7eac84a8cc5607318}\label{class_matrix_aa30b90656f5063a7eac84a8cc5607318} 
+double {\bfseries norm} ()
+\item 
+\Hypertarget{class_matrix_a6a78db19b7552285dffb0777272a5738}\label{class_matrix_a6a78db19b7552285dffb0777272a5738} 
+double {\bfseries norma\+Vector} ()
+\item 
+\Hypertarget{class_matrix_a5708d6fdf52f3e9d71d56fd0455dd614}\label{class_matrix_a5708d6fdf52f3e9d71d56fd0455dd614} 
+double {\bfseries producto\+Escalar} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m2)
+\item 
+\Hypertarget{class_matrix_adee110cb6e8fa23da993529344cd8d90}\label{class_matrix_adee110cb6e8fa23da993529344cd8d90} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries producto\+Vectorial} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m2)
+\item 
+\Hypertarget{class_matrix_a501594d22bdc9599525e262042270667}\label{class_matrix_a501594d22bdc9599525e262042270667} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries transponer} ()
+\item 
+\Hypertarget{class_matrix_ac5c0dac0fc2158355a05aa6bc546e5e4}\label{class_matrix_ac5c0dac0fc2158355a05aa6bc546e5e4} 
+\mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries inversa} ()
+\item 
+\Hypertarget{class_matrix_adb0d2467ea57750745e84c038baeaa90}\label{class_matrix_adb0d2467ea57750745e84c038baeaa90} 
+double {\bfseries determinante} ()
+\item 
+\Hypertarget{class_matrix_a854f1de78631478a61fbb46db8b0b6f0}\label{class_matrix_a854f1de78631478a61fbb46db8b0b6f0} 
+void {\bfseries to\+String} ()
+\item 
+\Hypertarget{class_matrix_a99ba97122b8fdd54e95290caf80fc8e2}\label{class_matrix_a99ba97122b8fdd54e95290caf80fc8e2} 
+void {\bfseries print} ()
+\item 
+\Hypertarget{class_matrix_a90782d614800e20c080ef550a63eaede}\label{class_matrix_a90782d614800e20c080ef550a63eaede} 
+bool {\bfseries equal\+Matrix} (const \mbox{\hyperlink{class_matrix}{Matrix}} \&m1, const \mbox{\hyperlink{class_matrix}{Matrix}} \&m2, double tolerancia)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_matrix_a317c0d21087c06beda52fa65f2f54194}\label{class_matrix_a317c0d21087c06beda52fa65f2f54194} 
+static double {\bfseries norma\+Vector} (std\+::vector$<$ double $>$ vec)
+\item 
+\Hypertarget{class_matrix_a66205ee4f804d9187b552ed6282e22f9}\label{class_matrix_a66205ee4f804d9187b552ed6282e22f9} 
+static double {\bfseries producto\+Escalar} (std\+::vector$<$ double $>$, std\+::vector$<$ double $>$)
+\item 
+\Hypertarget{class_matrix_a4a9bd6c3d28badc495d2652a7f4bab02}\label{class_matrix_a4a9bd6c3d28badc495d2652a7f4bab02} 
+static std\+::vector$<$ double $>$ {\bfseries producto\+Vectorial} (std\+::vector$<$ double $>$ vec1, std\+::vector$<$ double $>$ vec2)
+\item 
+\Hypertarget{class_matrix_ace5f72610a2670c5f2ff3cf668e47209}\label{class_matrix_ace5f72610a2670c5f2ff3cf668e47209} 
+static std\+::vector$<$ double $>$ {\bfseries unit} (const std\+::vector$<$ double $>$ \&vec)
+\item 
+\Hypertarget{class_matrix_a171b0a651139874638444bce3a87b321}\label{class_matrix_a171b0a651139874638444bce3a87b321} 
+static double {\bfseries angl} (const std\+::vector$<$ double $>$ vec1, const std\+::vector$<$ double $>$ vec2)
+\item 
+\Hypertarget{class_matrix_a214614b558034caaef52c44b257f88d9}\label{class_matrix_a214614b558034caaef52c44b257f88d9} 
+static \mbox{\hyperlink{class_matrix}{Matrix}} {\bfseries identidad} (int n)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/include/Matrix.\+h\item 
+C\+:/\+Users/cuadr/\+Desktop/\+Proyecto/src/\mbox{\hyperlink{_matrix_8cpp}{Matrix.\+cpp}}\end{DoxyCompactItemize}
